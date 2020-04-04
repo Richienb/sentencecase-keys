@@ -1,6 +1,6 @@
 {
 	"name": "sentencecase-keys",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Convert object keys to sentence case.",
 	"repository": "https://github.com/Richienb/sentencecase-keys.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
