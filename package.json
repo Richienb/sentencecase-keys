@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "sentencecase-keys",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Convert object keys to sentence case.",
+	"repository": "https://github.com/Richienb/sentencecase-keys.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,20 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"sentence",
+		"case",
+		"keys",
+		"object",
+		"array",
+		"convert",
+		"change",
+		"format"
+	],
+	"dependencies": {
+		"map-obj": "^4.1.0",
+		"sentence-case": "^3.0.3"
+	},
 	"devDependencies": {
 		"ava": "^3.5.2",
 		"eslint-config-richienb": "^0.4.2",

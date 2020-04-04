@@ -1,13 +1,8 @@
 const test = require("ava")
-const theModule = require(".")
+const sentencecaseKeys = require(".")
 
 test("main", t => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number"
-	})
+	t.deepEqual(sentencecaseKeys({ helloWorld: 1, "foo-bar": 2 }), { "Hello world": 1, "Foo bar": 2 })
 
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+	t.deepEqual(sentencecaseKeys([{ helloWorld: 1 }, { "hello-world": 1 }]), [{ "Hello world": 1 }, { "Hello world": 1 }])
 })

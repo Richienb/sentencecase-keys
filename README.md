@@ -1,41 +1,39 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# sentencecase-keys [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/sentencecase-keys/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/sentencecase-keys)
 
-My awesome module.
+Convert object keys to sentence case.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/sentencecase-keys.png)](https://npmjs.com/package/sentencecase-keys)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install sentencecase-keys
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const sentencecaseKeys = require("sentencecase-keys");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+sentencecaseKeys({ helloWorld: 1, "foo-bar": 2 });
+//=> { "Hello world": 1, "Foo bar": 2 }
+
+sentencecaseKeys([{ helloWorld: 1 }, { "hello-world": 1 }]);
+//=> [{ "Hello world": 1 }, { "Hello world": 1 }]
 ```
 
 ## API
 
-### theModule(input, options?)
+### sentencecaseKeys(object, options?)
 
-#### input
+#### object
 
-Type: `string`
+Type: `object or array of objects`
 
-Lorem ipsum.
+The object to convert.
 
 #### options
 
 Type: `object`
 
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+Options to pass to [map-obj](https://github.com/sindresorhus/map-obj#options).
